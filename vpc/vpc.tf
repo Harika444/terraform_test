@@ -20,3 +20,11 @@ resource "aws_subnet" "prod-subnet-public-1" {
         Name = "prod-subnet-public-1"
     }
 }
+
+output "vpc_id" {
+    value = aws_vpc.prod-vpc.vpc_id
+}
+
+output "subnet_id" {
+    value = aws_subnet.prod-subnet-public-1.subnet_id
+}
